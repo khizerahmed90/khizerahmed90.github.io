@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>beaches</title>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .header {
+            overflow: hidden;
+            background-color: skyblue;
+        }
+
+        .header h1 {
+            float: left;
+            margin: 0;
+            padding: 10px;
+            color: white;
+        }
+
+
+
+
+
+
+        .img1 {
+            display: inline-block;
+        }
+
+        .img2 {
+            display: inline-block;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .header2 {
+            text-align: center;
+            color: #56D5C4;
+            margin-top: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+
+        .card {
+            margin: 20px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .background-div {
+            background-image: url('e1.jpg');
+            /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            transition: filter 0.3s;
+        }
+
+        .background-div:hover {
+            filter: brightness(0.8);
+            /* Dimming the image on hover */
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            /* Text color */
+            padding: 20px;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007bff;
+            /* Button background color */
+            color: #fff;
+            /* Button text color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            /* Button background color on hover */
+        }
+
+        #gallery h1 {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 900;
+            color: #56D5C4;
+            margin-top: 40px;
+
+
+        }
+
+        .hoverable-image:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s;
+        }
+
+        #site-map h1 {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 900;
+            color: #56D5C4;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            margin-left: -30px;
+        }
+
+        .contact-info,
+        .contact-form {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input,
+        textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #56D5C4;
+            color: white;
+            padding: 10px;
+            border: none;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: black;
+
+        }
+
+        .contact-form {
+            background-color: #56D5C4;
+            color: black;
+
+        }
+
+        .logo-img {
+            float: left;
+            margin-left: -400px;
+            margin-top: -30px;
+        }
+
+        .container-fluid {
+            color: black;
+            padding-left: 8;
+
+        }
+
+        .container-fluid :hover {
+            color: #56D5C4;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+
+
+        .pic {
+            height: 50%;
+            width: 45%;
+        }
+
+        .text {
+            width: 540px;
+        }
+
+        .text h1 {
+            font-size: 45px;
+            font-weight: 600;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-bottom: 20px;
+            color: rgb(56, 202, 195);
+        }
+
+        .text h5 {
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        span {
+            color: rgb(56, 202, 195);
+        }
+
+
+        .text p {
+            font-size: 18px;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        .link {
+            margin-top: 30px;
+        }
+
+        .hire {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #4070f4;
+            padding: 8px 25px;
+            border-radius: 6px;
+            border: none;
+            box-shadow: rgb(56, 202, 195);
+            transition: 0.5s;
+        }
+
+        .hire:hover {
+            background: #000;
+
+        }
+
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            margin-left: 10px;
+            color: whitesmoke;
+            background-color: rgb(56, 202, 195);
+            box-shadow: rgb(56, 202, 195);
+            transition: all 0.4s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-8px);
+        }
+
+        #contact-us h1 {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 900;
+            color: #56D5C4;
+        }
+
+
+        #about-us h1 {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 900;
+            color: #56D5C4;
+        }
+
+        .section {
+            padding: 10px 0px;
+            text-align: center;
+        }
+
+        .left h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 550;
+            text-align: center;
+            color: rgb(56, 202, 195);
+        }
+
+        .right {
+            transform: translateX(100%);
+            opacity: 0;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+
+        }
+
+        .right h2 {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            color: rgb(56, 202, 195);
+
+        }
+
+        .left {
+            transform: translateX(-100%);
+            opacity: 0;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        .left h2 {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            color: rgb(56, 202, 195);
+        }
+
+        .show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        /* .navbar a:hover {
+    background-color: azure;
+    color: black;
+} */
+
+        /* Custom CSS to modify the hover color of carousel controls */
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background-color: transparent;
+            /* Set the background color to transparent */
+            color: #000;
+            /* Change the color of the arrows/icons */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <nav>
+        <div id="nav">
+            <div class="logo-img">
+                <img src="BB-removebg-preview.png" alt="" width="100px" height="100px">
+            </div>
+            <ul>
+
+                <li><a href="#home"><b>Home</b></a></li>
+                <li><a href="#"><b>About Us</b></a></li>
+                <li><a href="#contact-us"><b>Contact Us</b></a></li>
+                </li><a href="#gallery"><b>Gallery</b></a></li>
+                </li><a href="#site-map"><b>Site Map</b></a></li>
+                </li><a href="#"><b>Queries links</b></a></li>
+                <ul class="dropdown-content">
+                    <li><a href="#">North</a></li>
+                    <li><a href="#">South</a></li>
+                    <li><a href="#">East</a></li>
+                    <li><a href="#">West</a></li>
+                </ul>
+            </ul>
+        </div>
+    </nav> -->
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="logo">
+                    <img src="BB-removebg-preview.png" alt="" width="110px" height="110px">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="#home"> <b>Home</b> </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#about-us"><b>About Us</b> </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#gallery"><b>Gallery</b> </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#queries_link"><b>Queries Link</b> </a>
+                        </li>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+    <div id="home">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img13.jpg" class="d-block w-100" alt="..." width="650" height="595">
+                </div>
+                <div class="carousel-item">
+                    <img src="img14.jpg" class="d-block w-100" alt="..." width="650" height="595">
+                </div>
+                <div class="carousel-item">
+                    <img src="img12.jpg" class="d-block w-100" alt="..." width="650" height="595">
+                </div>
+                <div class="carousel-item">
+                    <img src="img15.jpg" class="d-block w-100" alt="..." width="650" height="595">
+                </div>
+                <div class="carousel-item">
+                    <img src="i7.jpg" class="d-block w-100" alt="..." width="650" height="595">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+
+    </div>
+    <div class="header2">
+        <h1>PREMIUM ACCOMMADATION</h1>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="e1.jpg" class="card-img-top" alt="Beach 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Standard Room</h5>
+                        <p class="card-text">Beautiful beach with golden sands and crystal-clear water.</p>
+                        <p class="card-price">$50 per day</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="e2.jpg" class="card-img-top" alt="Beach 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Deluxe Room</h5>
+                        <p class="card-text">Secluded paradise with white sandy shores and palm trees.</p>
+                        <p class="card-price">$70 per day</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="e3.jpg" class="card-img-top" alt="Beach 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Penthouse Room</h5>
+                        <p class="card-text">Surfing hotspot with great waves and a vibrant beach scene.</p>
+                        <p class="card-price">$60 per day</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <div class="background-div">
+        <div class="content">
+            <h1>Centered Heading</h1>
+            <p>This is a paragraph of text placed in the center of the div.</p>
+            <button>Learn More</button>
+
+        </div>
+    </div>
+
+    <div id="gallery">
+        <h1>GALLERY</h1>
+        <!-- <img src="e6.jpg" alt="" width="100%" height="100%">
+      <img src="e7.jpg" alt=""width="100%" height="100%">
+      <img src="e8.jpg" alt=""width="100%" height="100%">
+      <img src="e9.jpg" alt=""width="100%" height="100%">
+      <img src="e10.jpg" alt=""width="100%" height="100%"> -->
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="e8.jpg" alt="Image 1" class="card-img-top hoverable-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Diplomatic Room</h5>
+                            <p>$65 per day</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="e7.jpg" alt="Image 2" class="card-img-top hoverable-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Luxery Room</h5>
+                            <p>$80 per day</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="e9.jpg" alt="Image 2" class="card-img-top hoverable-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Royal Room</h5>
+                            <p>$50 per day</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Add more col-md-4 for additional images -->
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="e10.jpg" alt="Image 1" class="card-img-top hoverable-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Royal Room</h5>
+                            <p>$60 per day</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="e11.jpg" alt="Image 2" class="card-img-top hoverable-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Standard Room</h5>
+                            <p>$75 per day</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="e12.jpg" alt="Image 2" class="card-img-top hoverable-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Deluxe Room</h5>
+                            <p>$55 per day</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="about-us">
+            <h1>About-us</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="Pic1.jpg" width="90%" height="80%">
+                    </div>
+                    <div class="col-lg-8">
+                        <h5><b>BEATY OF <span> BEACHES.</span></b></h5>
+                        <p>The resort's beachfront amenities, including comfortable loungers, beachside cabanas, and a
+                            dedicated beach bar, ensure that every moment spent by the water is a seamless blend of
+                            luxury and natural beauty. Whether you're seeking an idyllic spot for sunbathing, a
+                            thrilling water sports adventure, or a romantic sunset walk, our resort's beaches offer a
+                            sensory experience that will leave you enchanted and invigorated.</p>
+                        <div class="social-links">
+                            <a href=""><i class="fab facbook-fa"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <button class="btn btn-primary">Hire Me</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div id="about-us">
+            <div class="about-us">
+                <div class="about">
+                    <div class="text">
+                         -->
+
+
+    </div>
+    </div>
+
+    <div id="site-map">
+        <h1> </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <img src="e14.jpg" alt="" height="470px" width="90%">
+                </div>
+                <div class="col-sm">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.07318402905!2d66.84548667592968!3d24.861349945220773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb31256ee361aab%3A0x3974691a1a162975!2sHawksbay%20Beach!5e0!3m2!1sen!2s!4v1699918539079!5m2!1sen!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="queries_link">
+        <div class="section left" id="leftDiv">
+            <h1>QUERIES LINK</h1>
+        </div>
+
+
+        <div class="section right" id="rightDiv">
+            <h2>{North Beach}</h2>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="pic03.jpeg" class="card-img-top" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="pic2.jpg" class="card-img-top" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="pic04.jpg" class="card-img-top" alt="">
+                    </div>
+                </div>
+            </div>
+            <br>
+
+        </div>
+
+
+        <div class="section left" id="leftDiv">
+            <h2>{South Beach}</h2>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="pic5.jpg" class="card-img-top" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="pic7.jpg" class="card-img-top" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="pic4.jpg" class="card-img-top" alt="" height="260px">
+                    </div>
+                </div>
+            </div>
+            <br>
+
+        </div>
+
+        <div class="section right" id="rightDiv">
+            <h2>{East Beache}</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="pic8.jpg" class="card-img-top" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="pic09.jpg" class="card-img-top" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="pic10.jpg" class="card-img-top" alt="">
+                    </div>
+                </div>
+            </div>
+            <br>
+
+        </div>
+
+        <div class="section left" id="leftDiv">
+            <h2>{West Beach}</h2>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="pic11.jpg" class="card-img-top" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="pic12.jpg" class="card-img-top" alt="" height="240px">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img11.jpg" class="card-img-top" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div id="contact-us">
+            <div class="container">
+
+                <h1> CONTACT US</h1>
+                <section class="contact-form">
+                    <h2>Contact Information</h2>
+                    <p>Email: khizerahmed301@gmail.com</p>
+                    <p>Phone: 03409642310</p>
+                    <p>Address: 123 Main Street, City, Country</p>
+                </section>
+
+                <section class="contact-form">
+                    <h2>Contact Form</h2>
+                    <form action="submit_form.php" method="POST">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Feedback:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <!-- Include SweetAlert via CDN -->
+
+
+
+        <script>
+            $(document).ready(function () {
+                $(window).scroll(function () {
+                    $(".section").each(function () {
+                        var postion = $(this).offset().top;
+                        var scrollPosition = $(window).scrollTop() + $(window).height() - 100;
+
+                        if (postion < scrollPosition) {
+                            $(this).addClass("show");
+                        }
+                    });
+                });
+
+                $(window).scroll();
+            });
+
+
+
+
+
+        </script>
+
+
+</body>
+
+</html>
